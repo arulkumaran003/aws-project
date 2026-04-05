@@ -1,0 +1,205 @@
+:root {
+    --primary: #E6D5F5;
+    --secondary: #FFE5EC;
+    --accent: #FFB5A7;
+    --text: #4A3B5C;
+    --background: #FFF9F5;
+    --shadow: rgba(74, 59, 92, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, var(--background) 0%, var(--secondary) 100%);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.affirmation-card {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 24px var(--shadow);
+    margin-bottom: 30px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.affirmation-card:hover {
+    transform: translateY(-2px);
+}
+
+.affirmation-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-align: center;
+    font-weight: 500;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    flex: 1;
+    min-width: 150px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #FF9B8A;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--text);
+    border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.favorites-section {
+    margin-top: 50px;
+}
+
+.favorites-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.favorites-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.favorite-item {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    animation: fadeIn 0.3s ease;
+}
+
+.favorite-text {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.remove-btn {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.remove-btn:hover {
+    background-color: #FF9B8A;
+    transform: scale(1.05);
+}
+
+.empty-message {
+    text-align: center;
+    opacity: 0.6;
+    font-style: italic;
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .affirmation-text {
+        font-size: 1.2rem;
+    }
+    
+    .actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .favorite-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .remove-btn {
+        align-self: flex-end;
+    }
+}

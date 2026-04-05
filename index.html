@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheAffirm - Daily Positive Affirmations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SheAffirm</h1>
+            <p class="tagline">Your daily dose of positivity</p>
+        </header>
+
+        <main>
+            <div class="affirmation-card">
+                <p class="affirmation-text" id="affirmationText"></p>
+            </div>
+
+            <div class="actions">
+                <button class="btn btn-primary" id="newAffirmationBtn">New Affirmation</button>
+                <button class="btn btn-secondary" id="saveFavoriteBtn">Save to Favorites</button>
+            </div>
+
+            <div class="favorites-section">
+                <h2>My Favorites</h2>
+                <div class="favorites-list" id="favoritesList"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
